@@ -3,27 +3,30 @@
 [![Latest Unstable Version](https://poser.pugx.org/trexology/pointable/v/unstable)](https://packagist.org/packages/trexology/pointable) [![License](https://poser.pugx.org/trexology/pointable/license)](https://packagist.org/packages/trexology/pointable)
 
 # Laravel Pointable
-Point Transaction system for laravel 5
+
+Point Transaction system for Laravel 5
+
+Original Package from [Trexology](https://github.com/Trexology/laravel-pointable)
 
 ## Installation
 
 First, pull in the package through Composer.
 
 ```js
-composer require trexology/pointable
+composer require alariva/laravel-pointable
 ```
 
 And then include the service provider within `app/config/app.php`.
 
 ```php
 'providers' => [
-    Trexology\Pointable\PointableServiceProvider::class
+    Alariva\Pointable\PointableServiceProvider::class
 ];
 ```
 
 At last you need to publish and run the migration.
 ```
-php artisan vendor:publish --provider="Trexology\Pointable\PointableServiceProvider" && php artisan migrate
+php artisan vendor:publish --provider="Alariva\Pointable\PointableServiceProvider" && php artisan migrate
 ```
 
 -----
@@ -34,8 +37,8 @@ php artisan vendor:publish --provider="Trexology\Pointable\PointableServiceProvi
 
 namespace App;
 
-use Trexology\Pointable\Contracts\Pointable;
-use Trexology\Pointable\Traits\Pointable as PointableTrait;
+use Alariva\Pointable\Contracts\Pointable;
+use Alariva\Pointable\Traits\Pointable as PointableTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class User extends Model implements Pointable

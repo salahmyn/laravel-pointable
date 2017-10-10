@@ -1,5 +1,5 @@
 {
-    "name": "trexology/pointable",
+    "name": "alariva/laravel-pointable",
     "description": "Point system for Laravel 5",
     "keywords": ["points", "pointable", "laravel", "loyalty", "reward"],
     "license": "MIT",
@@ -7,7 +7,11 @@
         {
             "name": "Trex Lim",
             "email": "trexlim@gmail.com"
-        }
+        },
+        {
+            "name": "Ariel Vallese",
+            "email": "alariva@gmail.com"
+        },
     ],
     "minimum-stability": "dev",
     "require": {
@@ -16,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Trexology\\Pointable\\": "src/"
+            "Alariva\\Pointable\\": "src/"
         }
     }
 }

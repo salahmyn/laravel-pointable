@@ -1,6 +1,6 @@
 <?php
 
-namespace Trexology\Pointable;
+namespace Alariva\Pointable;
 
 use Illuminate\Support\ServiceProvider;
 
