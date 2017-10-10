@@ -11,7 +11,7 @@
         {
             "name": "Ariel Vallese",
             "email": "alariva@gmail.com"
-        },
+        }
     ],
     "minimum-stability": "dev",
     "require": {
