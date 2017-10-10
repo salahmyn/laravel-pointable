@@ -11,8 +11,8 @@ class CreatePointTransactionsTable extends Migration
             $table->increments('id');
             $table->text('message');
             $table->morphs('pointable');
-            $table->double('amount');
-            $table->double('current');
+            $table->unsignedBigInteger('amount');
+            $table->unsignedBigInteger('current');
             $table->timestamps();
         });
     }

@@ -38,7 +38,7 @@ class Transaction extends Model
          ->pluck('current')->first();
 
          if (!$currentPoint) {
-           $currentPoint = 0.0;
+           $currentPoint = 0;
          }
 
          return $currentPoint;
