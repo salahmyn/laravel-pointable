@@ -22,5 +22,12 @@
         "psr-4": {
             "Alariva\\Pointable\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alariva\\Pointable\\PointableServiceProvider"
+            ]
+        }
     }
 }
