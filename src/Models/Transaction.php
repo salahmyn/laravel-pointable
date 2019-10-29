@@ -1,6 +1,6 @@
 <?php
 
-namespace Alariva\Pointable\Models;
+namespace Salahmyn\Pointable\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -29,20 +29,20 @@ class Transaction extends Model
      *
      * @return static
      */
-     public function getCurrentPoints(Model $pointable)
-     {
-         $currentPoint = Transaction::
+    public function getCurrentPoints(Model $pointable)
+    {
+        $currentPoint = Transaction::
          where('pointable_id', $pointable->id)
          ->where('pointable_type', $pointable->getMorphClass())
          ->orderBy('created_at', 'desc')
          ->pluck('current')->first();
 
-         if (!$currentPoint) {
-           $currentPoint = 0;
-         }
+        if (!$currentPoint) {
+            $currentPoint = 0;
+        }
 
-         return $currentPoint;
-     }
+        return $currentPoint;
+    }
 
     /**
      * @param Model $pointable
@@ -61,7 +61,7 @@ class Transaction extends Model
 
         $transaction->message = $message;
         if ($data) {
-          $transaction->fill($data);
+            $transaction->fill($data);
         }
         // $transaction->save();
         $pointable->transactions()->save($transaction);

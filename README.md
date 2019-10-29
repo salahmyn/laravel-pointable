@@ -13,32 +13,34 @@ Original Package from [Trexology](https://github.com/Trexology/laravel-pointable
 First, pull in the package through Composer.
 
 ```js
-composer require alariva/laravel-pointable
+composer require Salahmyn/laravel-pointable
 ```
 
 And then include the service provider within `app/config/app.php`.
 
 ```php
 'providers' => [
-    Alariva\Pointable\PointableServiceProvider::class
+    Salahmyn\Pointable\PointableServiceProvider::class
 ];
 ```
 
 At last you need to publish and run the migration.
+
 ```
-php artisan vendor:publish --provider="Alariva\Pointable\PointableServiceProvider" && php artisan migrate
+php artisan vendor:publish --provider="Salahmyn\Pointable\PointableServiceProvider" && php artisan migrate
 ```
 
------
+---
 
 ### Setup a Model
+
 ```php
 <?php
 
 namespace App;
 
-use Alariva\Pointable\Contracts\Pointable;
-use Alariva\Pointable\Traits\Pointable as PointableTrait;
+use Salahmyn\Pointable\Contracts\Pointable;
+use Salahmyn\Pointable\Traits\Pointable as PointableTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class User extends Model implements Pointable
@@ -48,6 +50,7 @@ class User extends Model implements Pointable
 ```
 
 ### Add Points
+
 ```php
 $user = User::first();
 $amount = 10; // (Double) Can be a negative value
@@ -64,6 +67,7 @@ dd($transaction);
 ```
 
 ### Get Current Points
+
 ```php
 $user = User::first();
 $points = $user->currentPoints();
@@ -72,6 +76,7 @@ dd($points);
 ```
 
 ### Get Transactions
+
 ```php
 $user = User::first();
 $user->transactions;
@@ -83,6 +88,7 @@ dd($user);
 ```
 
 ### Count Transactions
+
 ```php
 $user = User::first();
 $user['transactions_total'] = $user->countTransactions();

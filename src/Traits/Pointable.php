@@ -1,8 +1,8 @@
 <?php
 
-namespace Alariva\Pointable\Traits;
+namespace Salahmyn\Pointable\Traits;
 
-use Alariva\Pointable\Models\Transaction;
+use Salahmyn\Pointable\Models\Transaction;
 use Illuminate\Database\Eloquent\Model;
 
 trait Pointable
@@ -12,15 +12,16 @@ trait Pointable
      */
     public function transactions($amount = null)
     {
-        return $this->morphMany(Transaction::class, 'pointable')->orderBy('created_at','desc')->take($amount);
+        return $this->morphMany(Transaction::class, 'pointable')->orderBy('created_at', 'desc')->take($amount);
     }
 
     /**
      *
      * @return mix
      */
-    public function countTransactions(){
-      return $this->transactions()
+    public function countTransactions()
+    {
+        return $this->transactions()
           ->count();
     }
 
@@ -42,6 +43,6 @@ trait Pointable
      */
     public function addPoints($amount, $message, $data = null)
     {
-        return (new Transaction())->addTransaction($this, $amount, $message, $data = null);
+        return (new Transaction())->addTransaction($this, $amount, $message, $data);
     }
 }

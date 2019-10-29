@@ -1,33 +1,43 @@
 {
-    "name": "alariva/laravel-pointable",
-    "description": "Point system for Laravel 5",
-    "keywords": ["points", "pointable", "laravel", "loyalty", "reward"],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Trex Lim",
-            "email": "trexlim@gmail.com"
-        },
-        {
-            "name": "Ariel Vallese",
-            "email": "alariva@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "php": ">=5.5.9",
-        "illuminate/support": "~5.0"
+  "name": "salahmyn/laravel-pointable",
+  "description": "Point system for Laravel 5, Original Package trexlim/laravel-pointable",
+  "keywords": [
+    "points",
+    "pointable",
+    "laravel",
+    "loyalty",
+    "reward"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Trex Lim",
+      "email": "trexlim@gmail.com"
     },
-    "autoload": {
-        "psr-4": {
-            "Alariva\\Pointable\\": "src/"
-        }
+    {
+      "name": "Ariel Vallese",
+      "email": "alariva@gmail.com"
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Alariva\\Pointable\\PointableServiceProvider"
-            ]
-        }
+    {
+      "name": "Salah M.",
+      "email": "salahmyn@gmail.com"
     }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.5.9",
+    "illuminate/support": "~5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Salahmyn\\Pointable\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Salahmyn\\Pointable\\PointableServiceProvider"
+      ]
+    }
+  }
 }

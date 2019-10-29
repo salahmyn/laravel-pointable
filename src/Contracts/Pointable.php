@@ -1,6 +1,6 @@
 <?php
 
-namespace Alariva\Pointable\Contracts;
+namespace Salahmyn\Pointable\Contracts;
 
 use Illuminate\Database\Eloquent\Model;
 
