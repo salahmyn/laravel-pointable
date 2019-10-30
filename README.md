@@ -13,7 +13,7 @@ Original Package from [Trexology](https://github.com/Trexology/laravel-pointable
 First, pull in the package through Composer.
 
 ```js
-composer require Salahmyn/laravel-pointable
+composer require salahmyn/laravel-pointable
 ```
 
 And then include the service provider within `app/config/app.php`.
